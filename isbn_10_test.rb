@@ -11,6 +11,8 @@ class TestIsbn < Minitest:: Test
 	
 	def test_remove_dashs_and_spaces
 		assert_equal("9780470059029",isbn_dash_space("9-78047-0059-0-29"))
+		assert_equal("9780470059029", isbn_dash_space("9 78047 0059 0 29"))
+	
 	end
 		
 
