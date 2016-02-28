@@ -8,3 +8,13 @@ def isbn_length(isbn_num)
 		false
 	end
 end
+
+def isbn_dash_space(isbn_number)
+	
+	if isbn_number.include?"-"
+		isbn_number.delete!"-"
+	else 
+		isbn_number
+	end
+
+end 
