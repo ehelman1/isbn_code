@@ -15,7 +15,9 @@ class TestIsbn < Minitest:: Test
 	
 	end
 		
-
+	def test_empty_string_false_for_valid_isbn_number
+		assert_equal(false, valid_isbn_number(""))
+	end
 
 
 
