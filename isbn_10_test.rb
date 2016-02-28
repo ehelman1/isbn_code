@@ -28,7 +28,10 @@ class TestIsbn < Minitest:: Test
 		assert_equal(false, isbn_remove_non_numerical_characters("97A 8-24-635 879-2"))
 
 	end
-
+	
+	def test_for_non_numerical_characters_is_false
+		assert_equal(false, valid_isbn_number("785-A-25 3652 321"))
+	end
 
 
 end

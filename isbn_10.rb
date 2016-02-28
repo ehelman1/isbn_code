@@ -33,7 +33,9 @@ def isbn_remove_non_numerical_characters(isbn_1)
 end
 def valid_isbn_number(isbn_1)
 	isbn_dash_space(isbn_1)
+	isbn_remove_non_numerical_characters(isbn_1)
 	isbn_length(isbn_1)
+	
 end
 	
 	
