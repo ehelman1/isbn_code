@@ -11,17 +11,26 @@ end
 
 def isbn_dash_space(isbn_number)
 	
-	if isbn_number.include?"-"
-		isbn_number = isbn_number.delete"-"
-	elsif isbn_number.include?" "
-		isbn_number.delete!" "
+	if isbn_number.include?("-") 
+		isbn_number = isbn_number.delete("-")
+	end
+	
+	if isbn_number.include?(" ")
+		isbn_number.delete!(" ")
 	else 
 		isbn_number
 	end
-isbn_number
+
 
 end 
 
+def isbn_remove_non_numerical_characters(isbn_1)
+	if isbn_1 =~/\D/
+		false
+	end
+
+
+end
 def valid_isbn_number(isbn_1)
 	isbn_dash_space(isbn_1)
 	isbn_length(isbn_1)

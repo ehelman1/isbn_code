@@ -18,13 +18,16 @@ class TestIsbn < Minitest:: Test
 	def test_empty_string_false_for_valid_isbn_number
 		assert_equal(false, valid_isbn_number(""))
 	end
+	
+	def test_valid_13_digit_with_spaces_and_hypens_returns_true
+		assert_equal("9780470059029", isbn_dash_space("97 8-047-00 590-29"))
 
+	end
+	
+	def test_for_non_numerical_characters
+		assert_equal(false, isbn_remove_non_numerical_characters("97A 8-24-635 879-2"))
 
-
-
-
-
-
+	end
 
 
 
